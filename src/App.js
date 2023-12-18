@@ -7,7 +7,6 @@ import { useState } from "react";
 function App() {
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
   const [newItem, setNewItem] = useState("");
-  const [search, setSearch] = useState("");
 
   function addItem(item){
       const id  = items.length ? items[items.length -1].id +1 : 1; 
