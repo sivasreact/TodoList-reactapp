@@ -36,7 +36,7 @@ function App() {
   return (
    <>
     <Header />
-    <Content items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))} handleCheck={handleCheck} handleDelete={handleDelete} 
+    <Content items={items.length && (items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase())))} handleCheck={handleCheck} handleDelete={handleDelete} 
     newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
     <Footer length={items.length}/>
    </>
