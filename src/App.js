@@ -5,7 +5,7 @@ import './index.css'
 import { useState } from "react";
 
 function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')) || []);
   const [newItem, setNewItem] = useState("");
   const [search, setSearch] = useState("");
 
@@ -36,7 +36,8 @@ function App() {
   return (
    <>
     <Header />
-    <Content items={items.length && (items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase())))} handleCheck={handleCheck} handleDelete={handleDelete} 
+    <Content items={items.length > 0 ? items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase())) : []}
+    handleCheck={handleCheck} handleDelete={handleDelete} 
     newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
     <Footer length={items.length}/>
    </>
