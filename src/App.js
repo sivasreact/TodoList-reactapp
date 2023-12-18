@@ -5,7 +5,8 @@ import './index.css'
 import { useState, useEffect } from "react";
 
 function App() {
-  const [items, setItems] = useState([]);
+ const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')) || []);
+
 
   useEffect(() => {
     // Fetch data from localStorage when the component mounts
