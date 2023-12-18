@@ -6,7 +6,6 @@ const Content = ({items, handleCheck, handleDelete,newItem,setNewItem,handleSubm
     <div className='content'>
             <section className="section-items">
               <Additem newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit}/>
-              <Search search={search} setSearch={setSearch} />
               {(items.length >0) ? (
                   <ul>
                       {items.map((item) => (
