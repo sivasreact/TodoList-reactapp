@@ -36,7 +36,7 @@ function App() {
    <>
     <Header />
     <Content items={items} handleCheck={handleCheck} handleDelete={handleDelete} 
-    newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} search={search} setSearch={setSearch}/>
+    newItem={newItem} setNewItem={setNewItem} handleSubmit={handleSubmit} />
     <Footer length={items.length}/>
    </>
   )
