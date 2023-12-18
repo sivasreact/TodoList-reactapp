@@ -1,5 +1,4 @@
 import Additem from "./Additem";
-import Search from "./Search";
 
 const Content = ({items, handleCheck, handleDelete,newItem,setNewItem,handleSubmit, search, setSearch}) => {
   return (
